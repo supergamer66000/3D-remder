@@ -1,3 +1,4 @@
+import OpenGL.GL
 import numpy as np
 
 class Triangle:
@@ -14,7 +15,7 @@ class Triangle:
         self.shader_program.release()
         self.vao.release()
     def get_vao(self):
-        vao = self.ctx.vertex_array(self.shader_program, [(self.vbo, 'f3', 'in_position')])
+        vao = self.ctx.vertex_array(self.shader_program, [self.vbo, 'f3', 'in_position'])
         return vao
     def get_vertex_data(self):
         vertex_data = [(-0.6, -0.8, 0.0), (0.6, -0.8, 0.0), (0.0, 0.8, 0.0)]

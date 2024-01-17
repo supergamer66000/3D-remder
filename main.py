@@ -31,7 +31,7 @@ class GraphicsEngine:
 
     def render(self):
         # Clears Frame buffer
-        self.ctx.clear(color=(0, 0, 255))
+        self.ctx.clear(color=(0, 0, 0))
         # render scene
         self.scene.render()
         # Swaps Buffers
