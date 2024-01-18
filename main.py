@@ -18,6 +18,7 @@ class GraphicsEngine:
         #  create an object to help tack time
         self.clock = pygame.time.Clock()
         self.time = 0
+        self.prev_time = pygame.time.get_ticks() * 0.001
         # Set Vars
         pygame.display.set_mode(win_size, flags=pygame.OPENGL | pygame.DOUBLEBUF)  # Set window size and Initializes OpenGL for pygame
         # Detect and use existing OpenGL content
@@ -43,7 +44,9 @@ class GraphicsEngine:
         pygame.display.flip()
 
     def get_time(self):
-        self.time = pygame.time.get_ticks() / 1000 # Cube seems to get faster every frame
+        current_time = pygame.time.get_ticks() * 0.001
+        self.time = current_time - self.prev_time
+        self.prev_time = current_time
     def run(self):
         while True:
             self.get_time()

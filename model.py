@@ -20,7 +20,7 @@ class Cube:
         self.shader_program['m_model'].write(self.m_model)
     def update(self):
         # Rotats the cube
-        self.m_model = glm.rotate(self.m_model, self.app.time, glm.vec3(0, 1, 0))
+        self.m_model = glm.rotate(self.m_model, self.app.time, glm.vec3(0, 0.2, 0.2))
         self.shader_program['m_model'].write(self.m_model)
     def render(self):
         self.update()
