@@ -1,2 +1,2 @@
-# 3D-remder
+# 3D-render
 Simple 3D render
