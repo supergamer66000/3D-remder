@@ -1,7 +1,6 @@
 import sys
 import pygame
 import OpenGL
-import OpenGL_accelerate
 import moderngl as mgl
 from model import *
 

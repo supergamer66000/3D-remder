@@ -1,5 +1,4 @@
 import OpenGL.GL
-import OpenGL_accelerate
 import numpy as np
 
 class Triangle:
