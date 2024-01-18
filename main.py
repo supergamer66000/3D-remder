@@ -43,7 +43,7 @@ class GraphicsEngine:
         pygame.display.flip()
 
     def get_time(self):
-        self.time = pygame.time.get_ticks() * 0.001
+        self.time = pygame.time.get_ticks() / 100000 # Cube seems to get faster every frame
     def run(self):
         while True:
             self.get_time()
