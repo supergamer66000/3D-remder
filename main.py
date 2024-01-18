@@ -43,7 +43,7 @@ class GraphicsEngine:
         pygame.display.flip()
 
     def get_time(self):
-        self.time = pygame.time.get_tick() * 0.001
+        self.time = pygame.time.get_ticks() * 0.001
     def run(self):
         while True:
             self.get_time()
